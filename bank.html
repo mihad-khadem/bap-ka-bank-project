@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Baap Er Bank</title>
+    <title>Baap Er Bank DashBoard</title>
 </head>
 <body>
     <header>
@@ -16,39 +16,38 @@
         <section class="mt-12">
             <div class="grid grid-cols-3 gap-4 w-9/12 mx-auto text-white">
                 <div class="bg-emerald-400 p-8 rounded-xl">
-                    <h4 class="text-2xl">Deposit</h4>
-                    <h2 class="text-4xl">$00</h2>
+                    <h4 class="text-2xl" >Deposit</h4>
+                    <h2 class="text-4xl">$ <span id="deposit-total">00</span> </h2>
                 </div>
                 <div class="bg-cyan-400 p-8 rounded-xl">
                     <h4 class="text-2xl">Withdraw</h4>
-                    <h2 class="text-4xl">$00</h2>
+                    <h2 class="text-4xl">$ <span id="withdraw-total">00</span></h2>
                 </div>
                 <div class="bg-zinc-400 p-8 rounded-xl">
                     <h4 class="text-2xl">Balance</h4>
-                    <h2 class="text-4xl">$1000</h2>
+                    <h2 class="text-4xl">$ <span id="balance-total">1200</span></h2>
                 </div>
             </div>
         </section>
         <!-- deposit & Withdraw  -->
         <section class="mt-12">
-            <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto text-white">
+            <div class="grid grid-cols-2 gap-4 w-9/12 mx-auto ">
                 <div class="bg-yellow-400 rounded-xl p-4">
-                    <h4 class="text-2xl">Please Deposit</h4>
-                    
-                    <input class="w-9/12 block mx-auto mt-2 mb-2 px-3" type="email" name="" id="user-email" placeholder="$ Deposit Amount ">
-                    <button id="btn-deposit" class="bg-black rounded-md px-8 py-2 font-medium cursor-pointer mt-2 ml-16" type="button" value="Deposit">Deposit</button>
+                    <h4 class="text-2xl text-white">Please Deposit</h4>
+                    <input id="deposit-field" class="w-9/12 block mx-auto mt-2 mb-2 px-3" type="text" name=""  placeholder="$ Deposit Amount ">
+                    <button id="btn-deposit" class="bg-black rounded-md px-8 py-2 font-medium cursor-pointer mt-2 ml-16 text-white" type="button" value="Deposit">Deposit</button>
                 </div>
                 <div class="bg-stone-600 rounded-xl p-4">
-                    <h4 class="text-2xl">Please Withdraw</h4>
-                    
-                    <input class="w-9/12 block mx-auto mt-2 mb-2 px-3" type="email" name="" id="user-email" placeholder="$ Withdraw Amount ">
-                    <button id="btn-withdraw" class="bg-black rounded-md px-8 py-2 font-medium cursor-pointer mt-2 ml-16" type="button" value="Withdraw">Withdraw</button>
+                    <h4 class="text-2xl text-white">Please Withdraw</h4>
+                    <input id="withdraw-field" class="w-9/12 block mx-auto mt-2 mb-2 px-3" type="text" name="" id="withdraw-field" placeholder="$ Withdraw Amount ">
+                    <button id="btn-withdraw" class="bg-black rounded-md px-8 py-2 font-medium cursor-pointer mt-2 ml-16 text-white" type="button" value="Withdraw">Withdraw</button>
                 </div>
             </div>
 
         </section>
 
     </main>
-    
+    <script src="js/deposit.js"></script>
+    <script src="js/withdraw.js"></script>
 </body>
 </html>
